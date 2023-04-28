@@ -1,0 +1,22 @@
+<h2>Lista Regioni</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Regione</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let r of regioni">
+            <td>{{r.id_regione}}</td>
+            <td>{{r.regione}}</td>
+            <td><a [routerLink]="['/regione', r.regione]">
+                <i class="fa-solid fa-eye"></i>
+            </a></td>
+        </tr>
+    </tbody>
+
+</table>

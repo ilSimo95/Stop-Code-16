@@ -1,0 +1,34 @@
+<h2>Lista province della regione {{myRegione}} </h2>
+
+<!--
+
+    Tabella .... 
+-->
+
+<table class="table">
+
+    <thead>
+        <th>
+            Provincia
+        </th>
+        <th>
+            Sigla
+        </th>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let p of objProvince">
+
+            <td>
+                {{p.provincia}}
+            </td>
+            <td>
+                {{p.provincia_sigla}} <!--
+                    si consiglia di fare un replace del carattere ' (l'apostrofo) con il carattere `
+                -->
+            </td>
+        </tr>
+    </tbody>
+
+
+</table>

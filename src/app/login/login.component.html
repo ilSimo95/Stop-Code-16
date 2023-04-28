@@ -1,0 +1,22 @@
+<form method = "post" (submit) = "invioDati()">
+    <div class="mb-3">
+      <label for="username" class="form-label">Username</label>
+      <input type="text"
+      [ngStyle]="{'background-color': username == '' ? 'yellow' : '', 
+      'border': username == '' ? '1px solid red' : '1px solid' }"
+      name = "username" class="form-control" id="username" [(ngModel)] = "username">
+    </div>
+    <div class="mb-3">
+      <label for="password" class="form-label">Password</label>
+      <input type="password"
+      [ngStyle]="{'background-color': password == '' ? 'yellow' : '', 
+      'border': password == '' ? '1px solid red' : '1px solid' }"
+      name="password" class="form-control" id="password" 
+      [(ngModel)] = "password">
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<div id="message" [ngClass] = "myClass" role="alert" 
+[innerHTML] = "myMessage" *ngIf="myMessage"></div>
+
