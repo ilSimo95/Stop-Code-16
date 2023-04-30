@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:"regioni", component:RegioniComponent},//localhost:4200/regioni
   {path:"regione/:nome", component: RegioneComponent}, //localhost:4200/regione/Liguria...
   {path: "dashboard/:token", component: DashboardComponent, canActivate: [AuthenticationGuard]}, //localhost:4200/dashboard/token
-  {path: "news", component: NewsComponent, /*canActivate: [AuthenticationGuard]*/}, //localhost:4200/news
+  {path: "news", component: NewsComponent, canActivate: [AuthenticationGuard], /*canActivate: [AuthenticationGuard]*/}, //localhost:4200/news
   {path: "login", component: LoginComponent},//localhost:4200/login
   {path: "**", component: NotFoundComponent},//localhost:4200/not-found
 ];
